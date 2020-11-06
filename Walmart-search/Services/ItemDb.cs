@@ -12,7 +12,6 @@ namespace Walmart_search.Services
         public ItemDb(IWalmartConfiguration settings)
         {
             var mdbClient = new MongoClient(settings.ConnectionString);
-
             var database = mdbClient.GetDatabase(settings.DatabaseName);
 
             _itemsCollection = database.GetCollection<Item>(settings.ItemsCollectionName);

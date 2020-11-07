@@ -1,0 +1,35 @@
+{
+  "id": 121,
+  "brand": "asdasbsa",
+  "description": "not palindrome description",
+  "image": "www.lider.cl/catalogo/images/whiteLineIcon.svg",
+  "price": 100000
+}
+{
+  "id": 2112,
+  "brand": "dsaasd",
+  "description": "not palindrome description",
+  "image": "www.lider.cl/catalogo/images/babyIcon.svg",
+  "price": 100000
+}
+{
+  "id": 31,
+  "brand": "not palindrome brand",
+  "description": "asdasbsa",
+  "image": "www.lider.cl/catalogo/images/homeIcon.svg",
+  "price": 100000
+}
+{
+  "id": 41,
+  "brand": "not palindrome brand",
+  "description": "asdasbbs",
+  "image": "www.lider.cl/catalogo/images/computerIcon.svg",
+  "price": 100000
+}
+{
+  "id": 51,
+  "brand": "not palindrome brand",
+  "description": "not palindrome description",
+  "image": "www.lider.cl/catalogo/images/whiteLineIcon.svg",
+  "price": 100000
+}

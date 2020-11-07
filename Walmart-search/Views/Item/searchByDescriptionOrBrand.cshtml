@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Walmart_search.Models.Item>
+﻿@model Walmart_search.Models.ListItemDiscount
 
 @{
     ViewData["Title"] = "Index";
@@ -10,28 +10,28 @@
     <thead>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model._id)
+            _id
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.id)
+            id
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.brand)
+            brand
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            description
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.image)
+            image
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.price)
+            price
         </th>
         <th></th>
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model) {
+    @foreach (var item in Model.ItemList) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item._id)
@@ -51,7 +51,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.price)
             </td>
-            @if (TempData["discount"].ToString() == "true")
+            @if (Model.Discount)
             {
                 <td>
                     [-50%]

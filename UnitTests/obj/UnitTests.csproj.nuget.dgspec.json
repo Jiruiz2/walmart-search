@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\UnitTests\\UnitTests.csproj": {}
+    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\UnitTests\\UnitTests.csproj": {
+    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\UnitTests\\UnitTests.csproj",
+        "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\UnitTests\\UnitTests.csproj",
         "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\UnitTests\\obj\\",
+        "outputPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj": {
-                "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj"
+              "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj": {
+                "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj"
               }
             }
           }
@@ -68,9 +68,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -79,14 +76,14 @@
         }
       }
     },
-    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj": {
+    "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj",
+        "projectUniqueName": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj",
         "projectName": "Walmart-search",
-        "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj",
+        "projectPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj",
         "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\obj\\",
+        "outputPath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rV/CZqgZNDm/3JJ360aUsKTHppnZiZ5LanPsGj9Al2nlDMqXvENeXrJvbpi/2FxYVUnT+yVpddtpAglNQBHKUw==",
+  "dgSpecHash": "7CfDrFDdc20ODJHdfi8DSYoz0W9yD337Dxh6LQtUUh1k1zTTuqGDguIeTzyv/JxkCXPwq3LeApBQZdiyO0J36Q==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\Walmart-search\\Walmart-search\\Walmart-search.csproj",
+  "projectFilePath": "D:\\Documentos\\Ramos Universidad\\Códigos extra\\walmart-search\\Walmart-search\\Walmart-search.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Javier\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\Javier\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

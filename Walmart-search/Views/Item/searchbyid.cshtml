@@ -4,28 +4,25 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Encontrados</h1>
 
 <table class="table">
     <thead>
     <tr>
         <th>
-            _id
+            Id
         </th>
         <th>
-            id
+            Marca
         </th>
         <th>
-            brand
+            Descripción
         </th>
         <th>
-            description
+            Link imagen
         </th>
         <th>
-            image
-        </th>
-        <th>
-            price
+            Precio
         </th>
         <th></th>
     </tr>
@@ -33,9 +30,6 @@
     <tbody>
     @foreach (var item in Model.ItemList) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item._id)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.id)
             </td>

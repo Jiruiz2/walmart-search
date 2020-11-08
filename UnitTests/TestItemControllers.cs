@@ -13,7 +13,7 @@ namespace UnitTests
 {
     public class TestItemControllers
     {
-        private static readonly IWalmartConfiguration TestConfiguration = new WalmartConfiguration
+        public static readonly IWalmartConfiguration TestConfiguration = new WalmartConfiguration
         {
             ConnectionString = "mongodb+srv://test-user:test-password@cluster0.oysy7.mongodb.net/test-db?retryWrites=true&w=majority", 
             DatabaseName = "test-db",
@@ -67,9 +67,9 @@ namespace UnitTests
             image = "www.lider.cl/catalogo/images/whiteLineIcon.svg",
             price = 100000
         };
-        private static ItemDb _testItemDb = new ItemDb(TestConfiguration);
-        private ItemController _itemController = new ItemController(_testItemDb);
-        private ITestOutputHelper _testOutputHelper;
+        public static ItemDb _testItemDb = new ItemDb(TestConfiguration);
+        public ItemController _itemController = new ItemController(_testItemDb);
+        public ITestOutputHelper _testOutputHelper;
         public TestItemControllers(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
@@ -81,8 +81,28 @@ namespace UnitTests
             {
                 return true;
             }
-
             return false;
+        }
+        public bool AreEqualLists(List<Item> itemList1, List<Item> itemList2)
+        {
+            if (itemList1.Count != itemList2.Count)
+            {
+                return false;
+            }
+
+            var equalItems = 0;
+            foreach (var item1 in itemList1)
+            {
+                foreach (var item2 in itemList2)
+                {
+                    if (AreEqualItems(item1, item2))
+                    {
+                        equalItems += 1;
+                        break;
+                    }
+                }
+            }
+            return equalItems == itemList1.Count;
         }
         [Fact]
         public void TestIsPalindrome()
@@ -114,7 +134,6 @@ namespace UnitTests
             var model = Assert.IsAssignableFrom<ListItemDiscount>(viewResult.ViewData.Model);
             Assert.True(AreEqualItems(model.ItemList[0], _item2));
             Assert.True(model.Discount);
-            Assert.Equal(1, model.ItemList.Count());
         }
         [Fact]
         public void TestSearchByIdNotDiscount()
@@ -124,28 +143,26 @@ namespace UnitTests
             var model = Assert.IsAssignableFrom<ListItemDiscount>(viewResult.ViewData.Model);
             Assert.True(AreEqualItems(model.ItemList[0], _item3));
             Assert.False(model.Discount);
-            Assert.Equal(1, model.ItemList.Count());
         }
         [Fact]
         public void TestSearchByDescriptionOrBrandDiscount()
         {
+            List<Item> baseItemList = new List<Item>(){_item1, _item3};
             var result = _itemController.SearchByDescriptionOrBrand("sbs");
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsAssignableFrom<ListItemDiscount>(viewResult.ViewData.Model);
-            Assert.True(AreEqualItems(model.ItemList[0], _item1));
-            Assert.True(AreEqualItems(model.ItemList[1], _item3));
+            Assert.True(AreEqualLists(model.ItemList, baseItemList));
             Assert.True(model.Discount);
             Assert.Equal(2, model.ItemList.Count());
         }
         [Fact]
         public void TestSearchByDescriptionOrBrandNotDiscount()
         {
+            List<Item> baseItemList = new List<Item>(){_item3, _item4, _item5};
             var result = _itemController.SearchByDescriptionOrBrand("brand");
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsAssignableFrom<ListItemDiscount>(viewResult.ViewData.Model);
-            Assert.True(AreEqualItems(model.ItemList[0], _item5));
-            Assert.True(AreEqualItems(model.ItemList[1], _item4));
-            Assert.True(AreEqualItems(model.ItemList[2], _item3));
+            Assert.True(AreEqualLists(model.ItemList, baseItemList));
             Assert.False(model.Discount);
             Assert.Equal(3, model.ItemList.Count());
         }

@@ -3,18 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Buscador de productos de Walmart</h1>
     <form asp-controller="Item" asp-action="SearchById">
         <p>
             Buscar por Id: <input type="number" name="id" required="required">
-            <input type="submit" value="SearchById" />
+            <input type="submit" value="Buscar" />
         </p>
     </form>
     <form asp-controller="Item" asp-action="SearchByDescriptionOrBrand">
         <p>
             Buscar por marca o descripción: <input type="text" name="searchParam" minlength="3" required="required">
-            <input type="submit" value="SearchByDescriptionOrBrand" />
+            <input type="submit" value="Buscar" />
         </p>
     </form>
 </div>
